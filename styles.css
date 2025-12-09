@@ -1,0 +1,127 @@
+/* styles.css
+   Basic styling for multi-page student portfolio.
+   Comments included as requested.
+*/
+
+/* Reset-ish */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial; line-height: 1.6; color: #222; background: #fff; }
+.container { max-width: 1000px; margin: 0 auto; padding: 1rem; }
+
+/* Header / nav */
+.site-header { background: #0B4F6C; color: #fff; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; }
+.logo a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.25rem; }
+.main-nav ul { list-style: none; display: flex; gap: 1rem; }
+.main-nav a { color: #e6f2f7; text-decoration: none; padding: 0.35rem 0.5rem; border-radius: 4px; }
+.main-nav a:hover { background: rgba(255,255,255,0.06); }
+.main-nav .active { background: rgba(255,255,255,0.12); }
+
+/* Hero - demonstrating float */
+.hero { padding: 1.5rem 0; }
+.hero-img { float: left; width: 180px; height: 180px; object-fit: cover; margin-right: 1rem; border-radius: 8px; border: 3px solid #0B4F6C; }
+.hero-text h1 { margin-bottom: 0.5rem; }
+.hero-text p { margin-bottom: 0.6rem; }
+.btn { display: inline-block; padding: 0.5rem 0.9rem; background: #0B7A9A; color: #fff; text-decoration: none; border-radius: 6px; margin-top: 0.5rem; border: none; cursor: pointer; }
+.btn:hover { opacity: 0.95; }
+
+/* clear floats */
+.clearfix::after { content: ""; display: block; clear: both; }
+
+/* quick-info floats */
+.quick-info { margin-top: 1.25rem; display: block; }
+.float-card { float: left; width: calc(33.333% - 1rem); background: #fff; margin-right: 1.5rem; padding: 0.75rem; border: 1px solid #ddd; border-radius: 6px; }
+.float-card:last-child { margin-right: 0; }
+
+/* About page */
+.about-page { padding: 1.2rem 0; }
+.about-img { width: 200px; height: 200px; object-fit: cover; float: left; margin-right: 1rem; border-radius: 8px; border: 2px solid #ddd; }
+.about-text { overflow: hidden; }
+.details-section ul {
+  margin-left: 1.2rem;
+  margin-top: 0.4rem;
+}
+
+.about-text ul {
+  margin-left: 1.2rem;
+  margin-top: 0.4rem;
+}
+
+
+/* Skills page - use flexbox for cards */
+.skills-header { margin: 1rem 0; }
+.card-grid { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+.card { flex: 1 1 calc(50% - 1rem); padding: 1rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); min-width: 220px; }
+
+/* Contact form */
+/* Contact section */
+.contact-section {
+  padding: 1rem 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Added styling for Contact Info box */
+.contact-info {
+  background: #e9f4f8;
+  border: 1px solid #c7dbe3;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.2rem;
+}
+
+.contact-info p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.contact-info a {
+  color: #0B4F6C;
+  text-decoration: underline;
+}
+
+.contact-info a:hover {
+  color: #0B7A9A;
+}
+
+/* Contact Form */
+.contact-form {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.contact-form label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form .btn {
+  width: fit-content;
+}
+
+
+/* Footer */
+.site-footer { background: #f4f4f4; padding: 0.8rem 0; margin-top: 2rem; text-align: center; color: #333; }
+
+/* Responsive tweaks */
+@media (max-width: 720px) {
+  .header-inner { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+  .main-nav ul { flex-wrap: wrap; gap: 0.5rem; }
+  .hero-img, .about-img { width: 120px; height: 120px; float: none; display: block; margin: 0 auto 0.8rem auto; }
+  .float-card { width: 100%; margin-bottom: 0.9rem; float: none; }
+  .card { flex: 1 1 100%; }
+}

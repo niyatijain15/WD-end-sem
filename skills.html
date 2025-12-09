@@ -1,0 +1,68 @@
+<!doctype html>
+<!-- skills.html - Skills & Projects Page
+     Comments: Contains 3+ skill/project cards laid out with flexbox.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shivam | Skills & Projects</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- include same nav so it appears consistent across pages -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo"><a href="index.html">Niyati Jain</a></div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html" class="active">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="skills-header">
+      <h2>Skills & Projects</h2>
+      <p>Below are a few skills and short project descriptions.</p>
+    </section>
+
+    <!-- Flexbox container for cards (requirement: use flexbox) -->
+    <section class="card-grid">
+      <!-- Card 1 -->
+      <article class="card" style="background:#E8F8F5; border: 2px solid #7ED6C8;">
+        <h3>Web Development</h3>
+        <p>Built responsive websites using HTML, CSS, JavaScript and small backend APIs. Example: Student portfolio & small e-commerce mockup.</p>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card" style="background:#E8F8F5; border: 2px solid #7ED6C8;">
+        <h3>IoT Projects</h3>
+        <p>Microcontroller projects with ESP8266/Arduino — remote sensor logging and simple home automation prototypes.</p>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card" style="background:#E8F8F5; border: 2px solid #7ED6C8;">
+        <h3>Algorithms & DS</h3>
+        <p>Practise on problem solving platforms and implement core algorithms for contests and coursework.</p>
+      </article>
+
+      <!-- Extra card to show flexibility -->
+      <article class="card" style="background:#E8F8F5; border: 2px solid #7ED6C8;">
+        <h3>Team Project: Innotech 2025</h3>
+        <p>Participated in the annual technical fest — collaborated with teammates on a prototype (details in report).</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Shivam — Student Portfolio</p>
+    </div>
+  </footer>
+</body>
+</html>
